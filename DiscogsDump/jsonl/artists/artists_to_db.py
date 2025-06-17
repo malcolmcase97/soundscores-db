@@ -3,6 +3,7 @@ import psycopg2
 from psycopg2.extras import Json
 from tqdm import tqdm
 from dotenv import load_dotenv
+import os
 
 # Load environment variables from .env file
 load_dotenv()
@@ -22,21 +23,25 @@ def connect_db():
     return psycopg2.connect(**DB_PARAMS)
 
 def insert_artist(cursor, artist):
+    # Extract artist id and convert to int
+    artist_id = artist.get('id')
+    if artist_id is None:
+        raise ValueError("Artist missing 'id'")
+    artist_id = int(artist_id)
+
     # Insert into artists table
     cursor.execute("""
         INSERT INTO artists (id, name, real_name, profile, data_quality, full_data)
         VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (id) DO NOTHING;
     """, (
-        artist.get('id'),
+        artist_id,
         artist.get('name'),
         artist.get('realname'),
         artist.get('profile'),
         artist.get('data_quality'),
         Json(artist)
     ))
-
-    artist_id = artist.get('id')
 
     # Insert URLs
     for url in artist.get('urls', {}).get('url', []):
@@ -90,14 +95,18 @@ def main():
     with open(ARTISTS_FILE, 'r', encoding='utf-8') as file:
         for line in tqdm(file, desc="Importing artists"):
             try:
-                artist = json.loads(line)
+                data = json.loads(line)
+                # Extract actual artist dictionary inside the "artist" key
+                artist = data.get('artist')
+                if not artist:
+                    print("Warning: 'artist' key missing in line, skipping")
+                    continue
+
                 insert_artist(cursor, artist)
+                conn.commit()
             except Exception as e:
                 print(f"Error inserting line: {e}")
                 conn.rollback()
-                continue
-
-            conn.commit()
 
     cursor.close()
     conn.close()
