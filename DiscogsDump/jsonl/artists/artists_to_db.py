@@ -23,15 +23,14 @@ def connect_db():
     return psycopg2.connect(**DB_PARAMS)
 
 def insert_artist(cursor, artist):
-    # Extract artist id and convert to int
     artist_id = artist.get('id')
     if artist_id is None:
         raise ValueError("Artist missing 'id'")
     artist_id = int(artist_id)
 
-    # Insert into artists table
+    # Insert into Artists
     cursor.execute("""
-        INSERT INTO artists (id, name, real_name, profile, data_quality, full_data)
+        INSERT INTO "Artists" (id, name, real_name, profile, data_quality, full_data)
         VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (id) DO NOTHING;
     """, (
@@ -43,47 +42,47 @@ def insert_artist(cursor, artist):
         Json(artist)
     ))
 
-    # Insert URLs
+    # Insert into ArtistUrls
     for url in artist.get('urls', {}).get('url', []):
         if url:
             cursor.execute("""
-                INSERT INTO artist_urls (artist_id, url)
+                INSERT INTO "ArtistUrls" (artist_id, url)
                 VALUES (%s, %s)
                 ON CONFLICT DO NOTHING;
             """, (artist_id, url))
 
-    # Insert aliases
+    # Insert into ArtistAliases
     for alias in artist.get('aliases', {}).get('name', []):
         if alias:
             cursor.execute("""
-                INSERT INTO artist_aliases (artist_id, alias_name)
+                INSERT INTO "ArtistAliases" (artist_id, alias_name)
                 VALUES (%s, %s)
                 ON CONFLICT DO NOTHING;
             """, (artist_id, alias))
 
-    # Insert name variations
+    # Insert into ArtistNameVariations
     for var in artist.get('namevariations', {}).get('name', []):
         if var:
             cursor.execute("""
-                INSERT INTO artist_name_variations (artist_id, variation)
+                INSERT INTO "ArtistNameVariations" (artist_id, variation)
                 VALUES (%s, %s)
                 ON CONFLICT DO NOTHING;
             """, (artist_id, var))
 
-    # Insert members
+    # Insert into ArtistMembers
     for member in artist.get('members', {}).get('name', []):
         if member:
             cursor.execute("""
-                INSERT INTO artist_members (artist_id, member_name)
+                INSERT INTO "ArtistMembers" (artist_id, member_name)
                 VALUES (%s, %s)
                 ON CONFLICT DO NOTHING;
             """, (artist_id, member))
 
-    # Insert groups
+    # Insert into ArtistGroups
     for group in artist.get('groups', {}).get('name', []):
         if group:
             cursor.execute("""
-                INSERT INTO artist_groups (artist_id, group_name)
+                INSERT INTO "ArtistGroups" (artist_id, group_name)
                 VALUES (%s, %s)
                 ON CONFLICT DO NOTHING;
             """, (artist_id, group))
@@ -96,7 +95,6 @@ def main():
         for line in tqdm(file, desc="Importing artists"):
             try:
                 data = json.loads(line)
-                # Extract actual artist dictionary inside the "artist" key
                 artist = data.get('artist')
                 if not artist:
                     print("Warning: 'artist' key missing in line, skipping")
