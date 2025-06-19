@@ -61,8 +61,13 @@ def insert_artist(cursor, artist):
             """, (artist_id, alias))
 
     # Insert into ArtistNameVariations
-    for var in artist.get('namevariations', {}).get('name', []):
-        if var:
+    name_variations = artist.get('namevariations', {}).get('name')
+
+    if name_variations:
+        if isinstance(name_variations, str):
+            name_variations = [name_variations]
+        
+        for var in name_variations:
             cursor.execute("""
                 INSERT INTO "ArtistNameVariations" (artist_id, variation)
                 VALUES (%s, %s)
