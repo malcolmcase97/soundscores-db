@@ -22,9 +22,16 @@ def convert_xml_to_jsonl(xml_file_path, output_dir, entry_tag):
 
 def xml_element_to_dict(elem):
     def inner(e):
-        if len(e) == 0:
-            return e.text
         result = {}
+
+        # Include attributes (like id="...")
+        result.update(e.attrib)
+
+        # If the element has no children, return text (or text + attributes)
+        if len(e) == 0:
+            text = e.text.strip() if e.text else None
+            return text if not result else {**result, "value": text}
+
         for child in e:
             tag = child.tag
             value = inner(child)
