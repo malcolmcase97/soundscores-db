@@ -219,7 +219,7 @@ def insert_release(cursor, release, log_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Import Discogs releases into database")
-    parser.add_argument('--start', type=int, default=0, help="Line number to start processing from (0-indexed)")
+    parser.add_argument('--start', type=int, default=0, help="Line number to start processing from (0-indexed)") # Last checkpoint: 10356061
     args = parser.parse_args()
 
     conn = connect_db()
