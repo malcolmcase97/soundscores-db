@@ -4,6 +4,7 @@ from psycopg2.extras import Json
 from tqdm import tqdm
 from dotenv import load_dotenv
 import os
+import argparse
 
 load_dotenv()
 
@@ -217,12 +218,18 @@ def insert_release(cursor, release, log_file):
         print(f"Error processing release id {release.get('id')}: {e}")
 
 def main():
+    parser = argparse.ArgumentParser(description="Import Discogs releases into database")
+    parser.add_argument('--start', type=int, default=0, help="Line number to start processing from (0-indexed)")
+    args = parser.parse_args()
+
     conn = connect_db()
     cursor = conn.cursor()
     log_file = open(ERROR_LOG, 'a', encoding='utf-8')
 
     with open(RELEASES_FILE, 'r', encoding='utf-8') as file:
-        for line in tqdm(file, desc="Importing releases"):
+        for i, line in enumerate(tqdm(file, desc="Importing releases")):
+            if i < args.start:
+                continue
             try:
                 data = json.loads(line)
                 release = data.get('release')
@@ -234,8 +241,8 @@ def main():
                 insert_release(cursor, release, log_file)
                 conn.commit()
             except Exception as e:
-                log_file.write(f"General error: {e}\n")
-                print(f"General error: {e}")
+                log_file.write(f"General error on line {i}: {e}\n")
+                print(f"General error on line {i}: {e}")
                 conn.rollback()
 
     cursor.close()
