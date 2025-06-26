@@ -1,0 +1,244 @@
+Error processing release id 7: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 13: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 56: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 142: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 173: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 215: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 243: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 282: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 318: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 320: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (320, 1342, null, N.Thanbar, null, Written By).
+
+Error processing release id 342: insert or update on table "TrackExtraArtists" violates foreign key constraint "TrackExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(355) is not present in table "Artists".
+
+Error processing release id 452: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 509: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 515: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 548: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 558: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (558, 2878, null, Jean-Michel Reusser, J.M Reusser, Executive Producer).
+
+Error processing release id 658: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 670: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (670, 3824, null, B. Green, null, Written By).
+
+Error processing release id 773: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 833: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (833, 4942, null, J. Quinn & Optical, null, Written By).
+
+Error processing release id 865: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (865, 5043, null, Hartnoll/Hartnoll/Barton, null, Written By).
+
+Error processing release id 904: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 936: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 979: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1081: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1110: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1111: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1112: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1116: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1126: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1126, 6547, null, Optical/Ed Rush/Fierce, null, Written By).
+
+Error processing release id 1134: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1134, 6595, null, Richard Breeden, null, Executive Producer).
+
+Error processing release id 1161: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1188: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1231: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1231, 7097, null, Lahr/Baumgartner, null, Written By).
+
+Error processing release id 1233: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(4733995) is not present in table "Artists".
+
+Error processing release id 1235: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1247: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1247, 7218, null, Julian Dem, null, Other [Assistance]).
+
+Error processing release id 1270: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1339: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1339, 7668, null, G Moroder / D Summer / Bellotte, null, Written By).
+
+Error processing release id 1346: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1445: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1461: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1472: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(629270) is not present in table "Artists".
+
+Error processing release id 1473: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1473, 8283, null, J.Maldini & D.Stein, null, Written By).
+
+Error processing release id 1476: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1481: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1485: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1485, 8325, null, D.Stein & D.White, null, Written By).
+
+Error processing release id 1507: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1522: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1546: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1547: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1551: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1551, 8604, null, J. Greenhalgh & P. Smith, null, Written By).
+
+Error processing release id 1567: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1638: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1638, 8989, null, Williams_Kausman_Smith, null, Written By).
+
+Error processing release id 1669: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1720: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1738: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1738, 9609, null, Rymetyme And Trace, null, Written By).
+
+Error processing release id 1739: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1739, 9610, null, Rymetyme & Younghead, null, Written By).
+
+Error processing release id 1748: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1761: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1766: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(15388752) is not present in table "Artists".
+
+Error processing release id 1779: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (1779, 9727, null, J.Majik & Danny Jay, null, Written By).
+
+Error processing release id 1788: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(15378798) is not present in table "Artists".
+
+Error processing release id 1834: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 1923: insert or update on table "TrackExtraArtists" violates foreign key constraint "TrackExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(355) is not present in table "Artists".
+
+Error processing release id 2034: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (2034, 11040, null, The Disco Diva, null, Written By).
+
+Error processing release id 2056: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (2056, 11162, null, Alan Fisch, null, Other [Special Thanks]).
+
+Error processing release id 2223: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2245: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2288: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2364: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2391: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2422: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2435: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2497: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2506: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2569: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (2569, 13781, null, K. Okan & R. Rodgers, null, Written By).
+
+Error processing release id 2570: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2571: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2572: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(15799455) is not present in table "Artists".
+
+Error processing release id 2580: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(643191) is not present in table "Artists".
+
+Error processing release id 2693: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(4733995) is not present in table "Artists".
+
+Error processing release id 2706: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2708: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2718: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2741: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2799: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (2799, 15076, null, Ged Day & Damian Tstsamuel, null, Written By).
+
+Error processing release id 2816: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2820: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2835: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2837: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2900: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2914: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2917: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2924: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2925: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (2925, 15752, null, DJ Tense & Arno B., null, Written By).
+
+Error processing release id 2928: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2941: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2945: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(15547611) is not present in table "Artists".
+
+Error processing release id 2948: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (2948, 15874, null, Blissenden/Burdall, null, Written By).
+
+Error processing release id 2990: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2994: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 2999: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (2999, 16224, null, Burns/Kooner/Nastri, null, Written By).
+
+Error processing release id 3008: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(639869) is not present in table "Artists".
+
+Error processing release id 3010: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3014: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3016: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3071: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3080: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(15184040) is not present in table "Artists".
+
+Error processing release id 3200: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3201: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3234: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (3234, 17723, null, Rowlands/Simons/Weaver, null, Written By).
+
+Error processing release id 3238: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3242: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (3242, 17798, null, Dunckel - Godin, null, Written By).
+
+Error processing release id 3249: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (3249, 17874, null, M. Tazzi, null, Written By).
+
+Error processing release id 3266: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3286: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3297: insert or update on table "TrackExtraArtists" violates foreign key constraint "TrackExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(355) is not present in table "Artists".
+
+Error processing release id 3301: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (3301, 18111, null, Barnes / P. Daley / E. Daley, null, Written By).
+
+Error processing release id 3308: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3311: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3313: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (3313, 18189, null, The Renegade Boys, null, Other [Thanks To]).
+
+Error processing release id 3314: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (3314, 18200, null, Dan Nigrin, null, Executive Producer).
+
+Error processing release id 3340: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3353: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3360: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3362: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3423: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3428: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (3428, 18907, null, Red Jerry, null, Executive Producer).
+
+Error processing release id 3441: null value in column "artist_id" of relation "TrackExtraArtists" violates not-null constraint
+DETAIL:  Failing row contains (3441, 19086, null, A.Uzoigwe, null, Other [Credit]).
+
+Error processing release id 3444: insert or update on table "TrackExtraArtists" violates foreign key constraint "TrackExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(355) is not present in table "Artists".
+
+Error processing release id 3462: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3478: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3481: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3502: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3551: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3554: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3591: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3602: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3618: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3625: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3645: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3683: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3685: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3698: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3728: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(355) is not present in table "Artists".
+
+Error processing release id 3729: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+Error processing release id 3735: insert or update on table "ReleaseExtraArtists" violates foreign key constraint "ReleaseExtraArtists_artist_id_fkey"
+DETAIL:  Key (artist_id)=(355) is not present in table "Artists".
+
