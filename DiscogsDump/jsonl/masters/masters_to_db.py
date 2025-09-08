@@ -107,18 +107,22 @@ def insert_master(cursor, master, log_file):
             ON CONFLICT DO NOTHING;
         """, (master_id, video_title, description))
 
-def main():
+def main(start_line=0):
     conn = connect_db()
     cursor = conn.cursor()
     log_file = open(ERROR_LOG, 'a', encoding='utf-8')
 
     with open(MASTERS_FILE, 'r', encoding='utf-8') as file:
-        for line in tqdm(file, desc="Importing masters"):
+        # Skip ahead to the desired line
+        for _ in range(start_line):
+            next(file, None)
+
+        for line_num, line in enumerate(tqdm(file, desc=f"Importing masters from line {start_line}"), start=start_line):
             try:
                 data = json.loads(line)
                 master = data.get('master')
                 if not master:
-                    print("Warning: 'master' key missing in line, skipping")
+                    print(f"Warning (line {line_num}): 'master' key missing, skipping")
                     continue
 
                 # Ensure master has ID (sometimes not explicitly set)
@@ -128,8 +132,8 @@ def main():
                 insert_master(cursor, master, log_file)
                 conn.commit()
             except Exception as e:
-                print(f"Error inserting master: {e}")
-                log_file.write(f"Error inserting master: {e}\n")
+                print(f"Error inserting master on line {line_num}: {e}")
+                log_file.write(f"Error inserting master on line {line_num}: {e}\n")
                 conn.rollback()
 
     cursor.close()
